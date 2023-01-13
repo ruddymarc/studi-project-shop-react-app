@@ -12,6 +12,12 @@ function App() {
 
   const [cart, setCart] = useState([])
   /**
+   * Returns the cart status
+   */
+  const cartState = cart.length ?
+    `${cart.length.toString()} article${cart.length > 1 ? 's' : ''}` :
+    'vide'
+  /**
    * Chek if item already in cart
    * @param {Object} item
    * @returns
@@ -39,7 +45,7 @@ function App() {
     <div className="App">
       <Page title='Articles en vente ici.' action={cart.length ? 'Voir panier' : null} callback={toggleModal}>
         <ProductList addOnCart={buyItem} alreadyInCart={alreadyInCart} />
-        <Modal title='Mon panier' displayed={modalDisplayed} closeAction={toggleModal}>
+        <Modal title={`Mon panier : ${cartState}`} displayed={modalDisplayed} closeAction={toggleModal}>
           <Cart products={cart} removeOnCart={removeItem} />
           <Button label='🚪 Fermer' sticky={true} onClick={toggleModal} />
         </Modal>
