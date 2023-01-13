@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 /**
  * Show one product
@@ -12,7 +13,13 @@ const ProductDetail = ({ name, picture, price, disabled, action, callback }) => 
       <div className={['Product-content', 'Wrapper'].join(' ')}>
         <h3>{name}</h3>
         <span style={{ display: 'block', fontSize: '1.8em' }} >{price} €</span>
-        <button className="Button" disabled={disabled} onClick={callback}>{action}</button>
+        <Button
+          label={action}
+          rounded={true}
+          color={action.match(/ajouter/i) ? 'green' : 'red'}
+          disabled={disabled}
+          onClick={callback}
+        />
       </div>
     </div>
   )

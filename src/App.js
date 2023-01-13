@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Button from './Components/Button'
 import Page from './Components/Page'
 import Modal from './Components/Modal'
 import Cart from './Components/Cart'
@@ -36,10 +37,11 @@ function App() {
   }
   return (
     <div className="App">
-      <Page title='Articles en vente ici.' action='Open modal' callback={toggleModal}>
+      <Page title='Articles en vente ici.' action={cart.length ? 'Voir panier' : null} callback={toggleModal}>
         <ProductList addOnCart={buyItem} />
         <Modal title='Mon panier' displayed={modalDisplayed} closeAction={toggleModal}>
           <Cart products={cart} removeOnCart={removeItem} />
+          <Button label='🚪 Fermer' sticky={true} onClick={toggleModal} />
         </Modal>
       </Page>
     </div>

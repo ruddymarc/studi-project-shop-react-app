@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 /**
  * Show Page wrapper
@@ -7,13 +8,7 @@ import React from 'react'
  */
 const Page = ({ title, children, action, callback }) => {
   const btnAction = action ?
-    ( <button 
-        className="Button"
-        style={{ position: 'sticky', top: '.5em', right: '.5em', marginLeft: 'auto' }} 
-        onClick={callback}
-      >
-        {action}
-      </button> ) :
+    ( <Button label={action} sticky={true} onClick={callback} /> ) :
     null
 
   return (

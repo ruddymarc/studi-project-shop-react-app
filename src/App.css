@@ -1,4 +1,3 @@
-.Button,
 .Wrapper,
 .Row-wrapper,
 .Modal-wrapper,
@@ -38,10 +37,6 @@
   height: auto;
   border-radius: .3em;
 }
-.Button {
-  border-radius: .3em;
-}
-.Button:hover,
 .Link:hover {
   cursor: pointer;
 }

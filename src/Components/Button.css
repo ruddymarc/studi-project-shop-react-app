@@ -1,0 +1,19 @@
+.Button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  border-radius: .3em;
+}
+.Button:hover {
+  cursor: pointer;
+}
+.rounded {
+  border-radius: 1em / 50%;
+}
+.sticky-right {
+  position: sticky;
+  top: .5em;
+  right: .5em;
+  margin-left: auto;
+}
