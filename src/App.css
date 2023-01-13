@@ -23,6 +23,9 @@
   border-radius: .5em;
   box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
 }
+.Modal-wrapper.disabled {
+  display: none;
+}
 .Modal-content {
   max-height: 15em;
   margin: .5em;
