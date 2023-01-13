@@ -1,0 +1,20 @@
+.Product,
+.Product-content {
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+.Product {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .8rem;
+  padding: .5em;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.Product-content {
+  flex-direction: column;
+}
+.disabled {
+  opacity: .33;
+  background-color: #eff5f2;
+}

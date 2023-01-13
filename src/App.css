@@ -40,10 +40,6 @@
 .Link:hover {
   cursor: pointer;
 }
-.disabled {
-  opacity: .33;
-  background-color: #eff5f2;
-}
 .align-center {
   text-align: center;
 }
