@@ -5,7 +5,7 @@ import React, {useState} from 'react'
  * List all products and their first action
  * @returns 
  */
-const ProductList = ({ addOnCart }) => {
+const ProductList = ({ addOnCart, alreadyInCart }) => {
   // Returns a random integer from 100 to 10000:
   const getRandomInt = () => Math.floor(Math.random() * (10000 - 100 + 1) ) + 100
   const [products] = useState([
@@ -22,6 +22,7 @@ const ProductList = ({ addOnCart }) => {
           picture={product.picture}
           name={product.name}
           price={product.price}
+          disabled={alreadyInCart(product)}
           action='Ajouter au panier'
           callback={() => { addOnCart(product) }}
         />
