@@ -10,7 +10,7 @@ import './ProductDetail.css'
 const ProductDetail = ({ name, picture, price, disabled, action, callback }) => {
   return (
     <div className={['Product', disabled ? 'disabled' : null].join(' ')}>
-      <img className="Picture" src={picture} alt={name} />
+      <img className="Product-picture" src={picture} alt={name} />
       <div className='Product-content'>
         <h3>{name}</h3>
         <span style={{ display: 'block', fontSize: '1.8em' }} >{price} €</span>

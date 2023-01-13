@@ -14,6 +14,11 @@
 .Product-content {
   flex-direction: column;
 }
+.Product-picture {
+  width: 8rem;
+  height: auto;
+  border-radius: .3em;
+}
 .disabled {
   opacity: .33;
   background-color: #eff5f2;

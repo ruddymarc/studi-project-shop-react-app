@@ -1,0 +1,21 @@
+.Modal-wrapper {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  position: absolute;
+  z-index: 999999;
+  background-color: #eff5f2;
+  border-radius: .5em;
+  box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
+}
+.Modal-content {
+  max-height: 15em;
+  margin: .5em;
+  padding: .5em;
+  overflow: scroll;
+  border: 3px inset #eff5f2;
+}
+.show {
+  display: flex;
+}
