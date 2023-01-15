@@ -1,13 +1,13 @@
 import React from 'react'
 import './Modal.css'
 
-const Modal = ({ title, children, displayed, closeAction }) => {
+const Modal = ({ title, children, displayed }) => {
   return (
     <div className={['Modal-wrapper', displayed ? 'show' : null].join(' ')}>
       <span 
         className='close'
         style={{ position: 'static', top: '.5em', right: '.5em', marginLeft: 'auto' }} 
-        onClick={closeAction}
+        onClick={children.filter(child => child.key === 'btnClose')[0]?.props?.onClick}
       >
         Ⓧ
       </span>
