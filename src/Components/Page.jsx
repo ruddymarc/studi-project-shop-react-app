@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from './Button'
 import './Page.css'
 
 /**
@@ -7,14 +6,9 @@ import './Page.css'
  * @param {*} param0 
  * @returns 
  */
-const Page = ({ title, children, action, callback }) => {
-  const btnAction = action ?
-    ( <Button label={action} sticky={true} onClick={callback} /> ) :
-    null
-
+const Page = ({ title, children }) => {
   return (
     <div className="Page-wrapper">
-      {btnAction}
       <h2>{title}</h2>
       <div className="Wrapper">
         {children}

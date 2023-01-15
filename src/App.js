@@ -43,7 +43,8 @@ function App() {
   }
   return (
     <div className="App">
-      <Page title='Articles en vente ici.' action={cart.length ? 'Voir panier' : null} callback={toggleModal}>
+      <Page title='Articles en vente ici.'>
+        { cart.length ? <Button label='Mon panier' sticky={true} onClick={toggleModal} /> : null }
         <ProductList addOnCart={buyItem} alreadyInCart={alreadyInCart} />
         <Modal title={`Mon panier : ${cartState}`} displayed={modalDisplayed}>
           <Cart products={cart} removeOnCart={removeItem} />
