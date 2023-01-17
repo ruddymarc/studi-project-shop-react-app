@@ -1,13 +1,15 @@
 .Modal-wrapper {
   display: none;
-  flex-direction: column;
-  align-items: center;
   font-size: calc(10px + 2vmin);
-  position: absolute;
+  position: sticky;
+  top: 1em;
   z-index: 999999;
   background-color: #eff5f2;
   border-radius: .5em;
   box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
+}
+.Modal-title {
+  text-align: center;
 }
 .Modal-content {
   max-height: 15em;
@@ -17,5 +19,5 @@
   border: 3px inset #eff5f2;
 }
 .show {
-  display: flex;
+  display: block;
 }

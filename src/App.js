@@ -43,13 +43,13 @@ function App() {
   }
   return (
     <div className="App">
+      { cart.length ? <Button label='Mon panier' sticky={true} onClick={toggleModal} /> : null }
+      <Modal title={`Mon panier : ${cartState}`} displayed={modalDisplayed}>
+        <Cart products={cart} removeOnCart={removeItem} />
+        <Button key='btnClose' label='🚪 Fermer' onClick={toggleModal} />
+      </Modal>
       <Page title='Articles en vente ici.'>
-        { cart.length ? <Button label='Mon panier' sticky={true} onClick={toggleModal} /> : null }
         <ProductList addOnCart={buyItem} alreadyInCart={alreadyInCart} />
-        <Modal title={`Mon panier : ${cartState}`} displayed={modalDisplayed}>
-          <Cart products={cart} removeOnCart={removeItem} />
-          <Button key='btnClose' label='🚪 Fermer' sticky={true} onClick={toggleModal} />
-        </Modal>
       </Page>
     </div>
   );
