@@ -1,17 +1,23 @@
 .Product,
-.Product-content {
+.Product-comment,
+.Product-content,
+.Product-wrapper {
   display: flex;
   align-items: center;
   font-size: calc(10px + 2vmin);
 }
-.Product {
+.Product,
+.Product-comment {
   flex-direction: row;
   flex-wrap: wrap;
   gap: .8rem;
+}
+.Product {
   padding: .5em;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-.Product-content {
+.Product-content,
+.Product-wrapper {
   flex-direction: column;
 }
 .Product-picture {

@@ -19,13 +19,7 @@ const ProductList = ({ addOnCart, alreadyInCart }) => {
   return (
     <div className="Products">
       { products.map(product => (
-        <div key={product.id} style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginBottom: '1em'
-        }}>
+        <div key={product.id} className='Product-wrapper'>
           <ProductDetail
             picture={product.picture}
             name={product.name}
@@ -54,9 +48,9 @@ const ProductList = ({ addOnCart, alreadyInCart }) => {
             </div>
             <div id="avis">
               { [...Array(getRandomSmallInt()).keys()].map(key => (
-                <div className="Comment-wrapper">
+                <div className="Product-comment">
                   <img src={require('../media/admin-users-svgrepo-com.svg')} alt='user-profile' />
-                  <div className="Comment-content">
+                  <div>
                     <h4>Avis : {[...Array(getRandomSmallInt()).keys()].map(key => '❤️').join(' ')}</h4>
                     <p>qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                   </div>
