@@ -13,7 +13,10 @@ const ProductDetail = ({ name, picture, price, disabled, action, callback }) => 
       <img className="Product-picture" src={picture} alt={name} />
       <div className='Product-content'>
         <h3>{name}</h3>
-        <span style={{ display: 'block', fontSize: '1.8em' }} >{price} €</span>
+        <span style={{ display: 'block', fontSize: '1.8em' }} >
+          {price.toString().slice(0, -2)} €
+          <small style={{fontSize: '.6em'}}> {price.toString().slice(-2)}</small>
+        </span>
         <Button
           label={action}
           rounded={true}
